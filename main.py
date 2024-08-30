@@ -4,20 +4,28 @@ from customer import Customer
 from flight import Flight
 from gate import Gate
 from airport import Airport
+from meal import Meal
+
+# olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients
 if __name__ == '__main__':
-    gate1 = Gate(10, 'Near the biggest plane', 3, (100, 200))
-    airport1 = Airport('Amr Alnas\'s Airport',
-                    'Alexandria, Egypt',
-                    (2004, 1, 1),
-                    [gate1],
-                    (1000, 2000), True)
-    print(airport1.airport_date_of_construction)
-    print(airport1.airport_location)
-    print(airport1.airport_name)
-    print(airport1.airport_size)
-    print(airport1.gates)
-    print(airport1.wifi_availability)
-    print(airport1.not_allowed_items_in_airports)
+    meal1 = Meal('Pizza', ['olive oil', 'oregano', 'tomato', 'olives', 'mozzarella', 'chesses'], 1250)
+    print(meal1.calories)
+    print(meal1.ingredients)
+    print(meal1.name)
+
+# gate1 = Gate(10, 'Near the biggest plane', 3, (100, 200))
+# airport1 = Airport('Amr Alnas\'s Airport',
+#                 'Alexandria, Egypt',
+#                 (2004, 1, 1),
+#                 [gate1],
+#                 (1000, 2000), True)
+# print(airport1.airport_date_of_construction)
+# print(airport1.airport_location)
+# print(airport1.airport_name)
+# print(airport1.airport_size)
+# print(airport1.gates)
+# print(airport1.wifi_availability)
+# print(airport1.not_allowed_items_in_airports)
 # print(gate1.gate_allowed_passing_people)
 # print(gate1.gate_location)
 # print(gate1.gate_number)
@@ -41,3 +49,10 @@ if __name__ == '__main__':
 # print(employee1.working_hours)
 # random_flight = Flight()
 # customer1 = Customer('Amr', 'Alnas', (2004, 1, 1), 'amer.live477@gmail.com', 1000, [random_flight])
+
+# Design and implement a flight booking system that allows users to:
+
+# 1. Choose the most suitable flight based on various parameters like time, price, and airline.
+# 2. Select departure and arrival airports.
+# 3. Enter customer details during the reservation process.
+# 4. Select a meal option and choose from additional services provided by the airline.

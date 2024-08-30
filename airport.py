@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from typing import Tuple, List
 from fixed_values import not_allowed_items_in_airports
+from employee import Employee
 from gate import Gate
 import datetime
 
@@ -10,6 +11,7 @@ class Airport:
                 airport_location: str,
                 airport_date_of_construction: Tuple[int],
                 gates: List[Gate], 
+                employees: List[Employee],
                 airport_size = Tuple[int],
                 wifi_availability: bool = True
                 ):
@@ -18,6 +20,7 @@ class Airport:
         self.airport_date_of_construction = airport_date_of_construction
         self.gates = gates
         self.airport_size = airport_size
+        self.employees = employees
         self.wifi_availability = wifi_availability
 
     @property
@@ -94,6 +97,20 @@ class Airport:
     @property
     def width(self) -> int:
         return self.__width
+
+    @property
+    def employees(self) -> List[Employee]:
+        return self.__employees
+
+    @employees.setter
+    def employees(self, value: List[Employee]) -> None:
+        if isinstance(value, list):
+            for val in value:
+                if not isinstance(val, Employee):
+                    raise TypeError('Not all employees you gave me are real employees')
+            self.__employees = value
+        else:
+            raise TypeError('You didn\t provide a list')
 
     @property
     def wifi_availability(self) -> bool:
