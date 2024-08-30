@@ -34,7 +34,10 @@ broke little boy')
 
     @flights.setter
     def flights(self, value: List[Flight] | None):
-        for flight in value:
-            if not isinstance(flight, Flight):
-                raise TypeError('Not flights you gave me are real flights')
-        self.__flights = value
+        if isinstance(value, list):
+            for flight in value:
+                if not isinstance(flight, Flight):
+                    raise TypeError('Not all flights you gave me are real flights')
+            self.__flights = value
+        else:
+            raise TypeError('You didn\t provide a list')

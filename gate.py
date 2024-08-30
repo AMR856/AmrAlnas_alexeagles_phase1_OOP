@@ -22,7 +22,7 @@ class Gate:
             self.__gate_number = value
         else:
             raise TypeError('You have to provide an integer bigger than or equal to 0')
-    
+
     @property
     def gate_location(self) -> str:
         return self.__gate_location
@@ -30,7 +30,7 @@ class Gate:
     @gate_location.setter
     def gate_location(self, value: str) -> None:
         if isinstance(value, str):
-            self.__gate_number = value
+            self.__gate_location = value
         else:
             raise TypeError('You have to provide a string to the location')
 
