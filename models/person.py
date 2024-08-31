@@ -77,6 +77,9 @@ class Person:
         else:
             raise TypeError('You should provide a string email')
 
-    def __str__(self) -> str:
-        return f"Person's Name is {self.firstname + ' ' + self.lastname}\nBirthdate is {self.birthdate}\nAddress is {self.address}\nPerson's Email is {self.email}"
+    @property
+    def fullname(self) -> str:
+        return (self.firstname + ' ' + self.lastname)
 
+    def __str__(self) -> str:
+        return f"Person's Name is {self.fullname}\nBirthdate is {self.birthdate}\nAddress is {self.address}\nPerson's Email is {self.email}"

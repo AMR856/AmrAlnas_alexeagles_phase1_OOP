@@ -72,4 +72,3 @@ size of the gate')
 
     def __str__(self) -> str:
         return f"Gate's Number is {self.gate_number}\nGate's Location is {self.gate_location}\nGate's Max allowed People is {self.gate_allowed_passing_people}\nAnd Gate's Size is {self.gate_size}"
-    

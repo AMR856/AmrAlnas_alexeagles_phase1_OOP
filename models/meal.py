@@ -47,3 +47,4 @@ class Meal:
 
     def __str__(self) -> str:
         return f"Meal's Name is {self.name}\nIts ingredients are {self.ingredients}\nIt contains {self.calories} Calories"
+    

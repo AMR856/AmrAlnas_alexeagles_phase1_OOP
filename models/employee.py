@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 import sys
+
+from models.airline import Airline
 sys.path.append("..")
 from .person import Person
-from typing import Tuple
+from typing import Tuple, Type
 from helpers.fixed_values import allowed_airlines
 from helpers.helper_functions import map_range
 import re
@@ -17,13 +19,13 @@ class Employee(Person):
                 start_hour: str,
                 finish_hour: str,
                 salary: int,
-                airline_name: str,
+                airline: Airline,
                 address: str = 'Somewhere in Egypt'):
         super().__init__(firstname, lastname, birthdate, email, address)
         self.start_hour = start_hour
         self.finish_hour = finish_hour
         self.salary = salary
-        self.airline_name = airline_name
+        self.airline = airline
 
     @property
     def salary(self):
@@ -38,16 +40,18 @@ class Employee(Person):
 and with a resonable value')
 
     @property
-    def airline_name(self):
-        return self.__airline_name
+    def airline(self):
+        return self.__airline
     
-    @airline_name.setter
-    def airline_name(self, value: str):
-        if isinstance(value, str) and value.lower() in lower_value_allowed_airlines:
-            self.__airline_name = value
+    @airline.setter
+    def airline(self, value: Airline):
+        if value is None:
+            self.__airline = None
+            return
+        if isinstance(value, Airline):
+            self.__airline = value
         else:
-            raise TypeError('You should provide the airline name as a string \
-and in the avaiable airlines in Egypt')
+            raise TypeError('You should proive an airline object')
 
     @property
     def start_hour(self):
@@ -91,5 +95,11 @@ and in the avaiable airlines in Egypt')
             number_after_digit = int(map_range(int(number_after_digit), 0, 10, 0, 60))
         return f'{working_hours}:{number_after_digit} Hours'
 
+    def salary_raise(self, value: int) -> None:
+        if isinstance(value, int):
+            self.__salary += value
+        else:
+            raise TypeError("Can't raise salary with non-integer value")
+
     def __str__(self) -> str:
-        return f"Employee's Start Hour is {self.start_hour} and Finish Hour is {self.finish_hour}\nHis Salary is {self.salary}\nHis Woring Hours in Total is {self.working_hours}\nAnd the Airline he is working in {self.airline_name}"
+        return f"Employee's Start Hour is {self.start_hour} and Finish Hour is {self.finish_hour}\nHis Salary is {self.salary}\nHis Woring Hours in Total is {self.working_hours}\nAnd the Airline he is working in {self.airline.airline_name}"

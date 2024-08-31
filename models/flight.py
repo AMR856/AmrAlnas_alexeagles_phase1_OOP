@@ -9,15 +9,13 @@ class Flight:
                 arrival_time: datetime.datetime,
                 from_place: str,
                 to_place: str,
-                price: int,
-                airline: Airline) -> None:
+                price: int) -> None:
         self.flight_id = flight_id
         self.departure_time = departure_time
         self.arrival_time = arrival_time
         self.from_place = from_place
         self.to_place = to_place
         self.price = price
-        self.airline = airline
 
     @property
     def flight_id(self) -> str:
@@ -85,16 +83,5 @@ class Flight:
         else:
             raise TypeError('You have to provide an int')
 
-    @property
-    def airline(self) -> Airline:
-        return self.__airline
-    
-    @airline.setter
-    def airline(self, value) -> None:
-        if isinstance(value, Airline):
-            self.__airline = value
-        else:
-            raise TypeError('You have to provide an Airline object')
-
     def __str__(self) -> str:
-        return f"Flight's ID is {self.flight_id}\nDeparture Time is {self.departure_time}\nArrival Time {self.arrival_time}\nIt's going from {self.from_place} to {self.to_place}\nIt costs {self.price}\nAnd is under the supervision of {self.airline.airline_name} Airline"
+        return f"Flight's ID is {self.flight_id}\nDeparture Time is {self.departure_time}\nArrival Time {self.arrival_time}\nIt's going from {self.from_place} to {self.to_place}\nIt costs {self.price}"

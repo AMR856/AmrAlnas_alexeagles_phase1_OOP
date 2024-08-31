@@ -68,6 +68,9 @@ class Airport:
     
     @gates.setter
     def gates(self, value: List[Gate]) -> None:
+        if value is None:
+            self.__gates = None
+            return
         if isinstance(value, list):
             for val in value:
                 if not isinstance(val, Gate):
@@ -75,6 +78,25 @@ class Airport:
             self.__gates = value
         else:
             raise TypeError('You didn\t provide a list')
+
+    def add_gate(self, value: Gate) -> None:
+        if isinstance(value, Gate):
+            self.__employees.append(value)
+        else:
+            raise TypeError('To add a gate you should give me a gate')
+
+    def remove_gate(self, gate_number: int) -> None:
+        status = 0
+        if isinstance(gate_number, int):
+            for gate in self.__gates:
+                if gate.gate_number == gate_number:
+                    self.__employees.remove(gate)
+                    status = 1
+                    break
+            if status: 
+                print('Gate was found and removed')
+            else:
+                print("Gate wasn't found")
 
     @property
     def airport_size(self) -> Tuple[int]:
@@ -105,7 +127,10 @@ class Airport:
         return self.__employees
 
     @employees.setter
-    def employees(self, value: List[Employee]) -> None:
+    def employees(self, value: List[Employee]):
+        if value is None:
+            self.__employees = None
+            return
         if isinstance(value, list):
             for val in value:
                 if not isinstance(val, Employee):
@@ -113,6 +138,25 @@ class Airport:
             self.__employees = value
         else:
             raise TypeError('You didn\t provide a list')
+
+    def add_employee(self, value: Employee) -> None:
+        if isinstance(value, Employee):
+            self.__employees.append(value)
+        else:
+            raise TypeError('To add an employee you should give me an employee')
+
+    def remove_employee(self, employee_name: str) -> None:
+        status = 0
+        if isinstance(employee_name, str):
+            for employee in self.__employees:
+                if employee.fullname == employee_name:
+                    self.__employees.remove(employee)
+                    status = 1
+                    break
+            if status:
+                print('Employee was found and removed')
+            else:
+                print("Employee wasn't found")
 
     @property
     def wifi_availability(self) -> bool:
