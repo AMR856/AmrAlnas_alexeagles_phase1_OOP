@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-
 class Movie:
     def __init__(self,
                 title: str,
@@ -68,3 +67,6 @@ class Movie:
             self.__rating = value
         else:
             raise TypeError('You have to provide a float')
+
+    def __str__(self) -> str:
+        return f"Movie's title is {self.title}\nIts director is {self.director}\nRelease Year is {self.release_year}\nGenre is {self.genre}\nAnd its Rating is {self.rating}"

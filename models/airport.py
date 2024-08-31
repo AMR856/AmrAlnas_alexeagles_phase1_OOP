@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
+import sys
+sys.path.append("..")
 from typing import Tuple, List
-from fixed_values import not_allowed_items_in_airports
-from employee import Employee
-from gate import Gate
+from helpers.fixed_values import not_allowed_items_in_airports
+from .employee import Employee
+from .gate import Gate
 import datetime
 
 class Airport:
@@ -122,3 +124,6 @@ class Airport:
             self.__wifi_availability = value
         else:
             raise TypeError('You have to provide a boolean')
+
+    def __str__(self) -> str:
+        return f'{self.airport_name}\nAirport Location is {self.airport_location}\nAirport Date of Construction is {self.airport_date_of_construction}\nGates Count is {len(self.gates)}\nAirport Size is {self.airport_size}\nEmployees Count is {len(self.employees)}\nWifi is {"Available" if self.wifi_availability else "Not Available"}'

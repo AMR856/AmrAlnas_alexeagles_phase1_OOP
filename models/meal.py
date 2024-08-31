@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from typing import List
+
 class Meal:
     def __init__(self, name: str,
                 ingredients: List[str],
@@ -43,3 +44,6 @@ class Meal:
             self.__calories= value
         else:
             raise TypeError('You didn\t provide an integer')
+
+    def __str__(self) -> str:
+        return f"Meal's Name is {self.name}\nIts ingredients are {self.ingredients}\nIt contains {self.calories} Calories"

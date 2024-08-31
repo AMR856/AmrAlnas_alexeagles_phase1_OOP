@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-from person import Person
+import sys
+sys.path.append("..")
+from .person import Person
 from typing import Tuple
-from fixed_values import allowed_airlines
-from helper_functions import map_range
+from helpers.fixed_values import allowed_airlines
+from helpers.helper_functions import map_range
 import re
 
 lower_value_allowed_airlines = list(map(str.lower, allowed_airlines))
@@ -88,3 +90,6 @@ and in the avaiable airlines in Egypt')
         if number_after_digit:
             number_after_digit = int(map_range(int(number_after_digit), 0, 10, 0, 60))
         return f'{working_hours}:{number_after_digit} Hours'
+
+    def __str__(self) -> str:
+        return f"Employee's Start Hour is {self.start_hour} and Finish Hour is {self.finish_hour}\nHis Salary is {self.salary}\nHis Woring Hours in Total is {self.working_hours}\nAnd the Airline he is working in {self.airline_name}"

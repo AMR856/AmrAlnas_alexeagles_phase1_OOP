@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import datetime
 import uuid
-from airline import Airline
+from models.airline import Airline
 
 class Flight:
     def __init__(self, flight_id: uuid.UUID,
@@ -90,8 +90,11 @@ class Flight:
         return self.__airline
     
     @airline.setter
-    def airline(self, value: Airline) -> None:
+    def airline(self, value) -> None:
         if isinstance(value, Airline):
             self.__airline = value
         else:
             raise TypeError('You have to provide an Airline object')
+
+    def __str__(self) -> str:
+        return f"Flight's ID is {self.flight_id}\nDeparture Time is {self.departure_time}\nArrival Time {self.arrival_time}\nIt's going from {self.from_place} to {self.to_place}\nIt costs {self.price}\nAnd is under the supervision of {self.airline.airline_name} Airline"

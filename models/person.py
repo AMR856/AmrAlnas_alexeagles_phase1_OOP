@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import datetime
 import validators
-from typing import Tuple, Type
+from typing import Tuple
 
 class Person:
     def __init__(self, firstname: str,
@@ -76,3 +76,7 @@ class Person:
                 raise ValueError('Email is not correct')
         else:
             raise TypeError('You should provide a string email')
+
+    def __str__(self) -> str:
+        return f"Person's Name is {self.firstname + ' ' + self.lastname}\nBirthdate is {self.birthdate}\nAddress is {self.address}\nPerson's Email is {self.email}"
+

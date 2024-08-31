@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-from person import Person
-from flight import Flight
+from .person import Person
+from .flight import Flight
 from typing import Tuple, List
 
 class Customer(Person):
