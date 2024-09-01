@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Sushi",
+    "ingredients": ["Rice", "Nori", "Fish", "Vegetables"],
+    "calories": 700,
+    "id": "meal_eb9fdc82-1b97-421d-aaaa-4a4bc97c01e4"
+  },
+  {
+    "name": "Spaghetti Bolognese",
+    "ingredients": [
+      "Spaghetti",
+      "Ground Beef",
+      "Tomato Sauce",
+      "Onion",
+      "Garlic"
+    ],
+    "calories": 850,
+    "id": "meal_172d7f8c-3933-4ab9-ad80-be4bfda7664d"
+  },
+  {
+    "name": "Caesar Salad",
+    "ingredients": [
+      "Romaine Lettuce",
+      "Croutons",
+      "Parmesan Cheese",
+      "Caesar Dressing",
+      "Chicken"
+    ],
+    "calories": 450,
+    "id": "meal_99f8024d-508a-4b32-8436-0e28a96d297f"
+  },
+  {
+    "name": "Tacos",
+    "ingredients": [
+      "Tortillas",
+      "Ground Beef",
+      "Cheese",
+      "Lettuce",
+      "Tomato",
+      "Sour Cream"
+    ],
+    "calories": 600,
+    "id": "meal_d0d518ed-1296-477f-a775-2b8462d532e9"
+  },
+  {
+    "name": "Chicken Curry",
+    "ingredients": ["Chicken", "Curry Sauce", "Rice", "Coconut Milk", "Spices"],
+    "calories": 900,
+    "id": "meal_8e301fa6-6a36-4c4f-99f9-99168f59b138"
+  },
+  {
+    "name": "Vegetable Stir-Fry",
+    "ingredients": ["Broccoli", "Carrots", "Bell Peppers", "Soy Sauce", "Tofu"],
+    "calories": 500,
+    "id": "meal_7986cd82-f252-4921-a697-940263f1605a"
+  }
+]

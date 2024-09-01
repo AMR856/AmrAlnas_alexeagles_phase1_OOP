@@ -1,0 +1,98 @@
+[
+  {
+    "departure_time": "09/05/24",
+    "arrival_time": "09/05/24",
+    "from_place": "Alexandria",
+    "to_place": "Berlin",
+    "price": 9000,
+    "id": "flight_44c0eaaa-9b5e-49ad-9371-69676801c27a"
+  },
+  {
+    "departure_time": "09/06/24",
+    "arrival_time": "09/06/24",
+    "from_place": "Cairo",
+    "to_place": "London",
+    "price": 8500,
+    "id": "flight_e817002c-77da-420e-a1b6-d2c7bff9ab27"
+  },
+  {
+    "departure_time": "09/07/24",
+    "arrival_time": "09/07/24",
+    "from_place": "Dubai",
+    "to_place": "New York",
+    "price": 12000,
+    "id": "flight_c91827aa-5e4e-4acc-b0e2-7dda508e5f0a"
+  },
+  {
+    "departure_time": "09/08/24",
+    "arrival_time": "09/08/24",
+    "from_place": "Paris",
+    "to_place": "Rome",
+    "price": 1100,
+    "id": "flight_98900cc3-329e-4315-9b82-1050d15e32a0"
+  },
+  {
+    "departure_time": "09/09/24",
+    "arrival_time": "09/09/24",
+    "from_place": "Tokyo",
+    "to_place": "Sydney",
+    "price": 7800,
+    "id": "flight_d209923e-817e-4623-ae07-bcb10ccd71e0"
+  },
+  {
+    "departure_time": "09/10/24",
+    "arrival_time": "09/10/24",
+    "from_place": "Los Angeles",
+    "to_place": "Toronto",
+    "price": 3900,
+    "id": "flight_a49596d2-4c4d-4aac-9582-e9a29fb1793b"
+  },
+  {
+    "departure_time": "09/11/24",
+    "arrival_time": "09/11/24",
+    "from_place": "Mumbai",
+    "to_place": "Singapore",
+    "price": 4300,
+    "id": "flight_2f28bddd-7e1b-458d-bfa8-f6e7ec511741"
+  },
+  {
+    "departure_time": "09/12/24",
+    "arrival_time": "09/12/24",
+    "from_place": "Hong Kong",
+    "to_place": "San Francisco",
+    "price": 11300,
+    "id": "flight_7ac0433d-0a2e-4c0c-bacb-66661210e54a"
+  },
+  {
+    "departure_time": "09/13/24",
+    "arrival_time": "09/13/24",
+    "from_place": "Moscow",
+    "to_place": "Beijing",
+    "price": 5800,
+    "id": "flight_f2473cfe-3ae7-499e-bb2e-161d325420e9"
+  },
+  {
+    "departure_time": "09/14/24",
+    "arrival_time": "09/14/24",
+    "from_place": "Istanbul",
+    "to_place": "Madrid",
+    "price": 2900,
+    "id": "flight_9ca1d655-f836-4b71-8402-bfd328961a09"
+  },
+  {
+    "departure_time": "09/15/24",
+    "arrival_time": "09/15/24",
+    "from_place": "Cape Town",
+    "to_place": "Dubai",
+    "price": 7600,
+    "id": "flight_7a7d2caf-4508-4b46-bdec-b533aff4fcad"
+  },
+  {
+    "departure_time": "09/16/24",
+    "arrival_time": "09/16/24",
+    "from_place": "Buenos Aires",
+    "to_place": "Miami",
+    "price": 7100,
+    "id": "flight_389cac79-3e81-471f-b04c-e25fe72d5118"
+  }
+]

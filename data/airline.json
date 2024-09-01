@@ -1,0 +1,363 @@
+[
+  {
+    "airline_name": "Air Arabia Egypt",
+    "employees": [
+      {
+        "firstname": "Amr",
+        "lastname": "Alnas",
+        "birthdate": "01/01/04",
+        "address": "Somewhere in Egypt",
+        "email": "amer.live477@gmail.com",
+        "start_hour": "7:00 AM",
+        "finish_hour": "5:00 PM",
+        "salary": 10000,
+        "airline_name": "Air Arabia Egypt",
+        "id": "employee_1267274b-fb75-4aa8-89b6-1ba9dafb79c6"
+      },
+      {
+        "firstname": "Sara",
+        "lastname": "Mahmoud",
+        "birthdate": "05/15/03",
+        "address": "Somewhere in Egypt",
+        "email": "sara.mahmoud@example.com",
+        "start_hour": "8:00 AM",
+        "finish_hour": "6:00 PM",
+        "salary": 12000,
+        "airline_name": "Egyptair",
+        "id": "employee_99a434b1-58bb-44ec-be0d-9c3684ab935d"
+      },
+      {
+        "firstname": "Omar",
+        "lastname": "Hassan",
+        "birthdate": "10/20/02",
+        "address": "Somewhere in Egypt",
+        "email": "omar.hassan@example.com",
+        "start_hour": "9:00 AM",
+        "finish_hour": "5:00 PM",
+        "salary": 11000,
+        "airline_name": "FlyEgypt",
+        "id": "employee_64f71b3b-e55b-4c11-9bd9-0c5168a57e9d"
+      }
+    ],
+    "services": [
+      {
+        "title": "The Pursuit of Happyness",
+        "director": "Gabriele Muccino",
+        "release_year": 2007,
+        "genre": "Drama",
+        "rating": 8.0,
+        "id": "movie_c2f34be0-663e-460f-a514-633942689e89"
+      },
+      {
+        "title": "Inception",
+        "director": "Christopher Nolan",
+        "release_year": 2010,
+        "genre": "Sci-Fi",
+        "rating": 8.8,
+        "id": "movie_457f4839-fa4a-4d11-b0d2-0421cd5ddc97"
+      },
+      {
+        "title": "The Shawshank Redemption",
+        "director": "Frank Darabont",
+        "release_year": 1994,
+        "genre": "Drama",
+        "rating": 9.3,
+        "id": "movie_7ca042ab-2125-405b-9895-80fd520464b1"
+      },
+      {
+        "name": "Sushi",
+        "ingredients": ["Rice", "Nori", "Fish", "Vegetables"],
+        "calories": 700,
+        "id": "meal_eb9fdc82-1b97-421d-aaaa-4a4bc97c01e4"
+      },
+      {
+        "name": "Spaghetti Bolognese",
+        "ingredients": [
+          "Spaghetti",
+          "Ground Beef",
+          "Tomato Sauce",
+          "Onion",
+          "Garlic"
+        ],
+        "calories": 850,
+        "id": "meal_172d7f8c-3933-4ab9-ad80-be4bfda7664d"
+      },
+      {
+        "name": "Caesar Salad",
+        "ingredients": [
+          "Romaine Lettuce",
+          "Croutons",
+          "Parmesan Cheese",
+          "Caesar Dressing",
+          "Chicken"
+        ],
+        "calories": 450,
+        "id": "meal_99f8024d-508a-4b32-8436-0e28a96d297f"
+      }
+    ],
+    "flights": [
+      {
+        "departure_time": "09/05/24",
+        "arrival_time": "09/05/24",
+        "from_place": "Alexandria",
+        "to_place": "Berlin",
+        "price": 9000,
+        "id": "flight_44c0eaaa-9b5e-49ad-9371-69676801c27a"
+      },
+      {
+        "departure_time": "09/06/24",
+        "arrival_time": "09/06/24",
+        "from_place": "Cairo",
+        "to_place": "London",
+        "price": 8500,
+        "id": "flight_e817002c-77da-420e-a1b6-d2c7bff9ab27"
+      },
+      {
+        "departure_time": "09/07/24",
+        "arrival_time": "09/07/24",
+        "from_place": "Dubai",
+        "to_place": "New York",
+        "price": 12000,
+        "id": "flight_c91827aa-5e4e-4acc-b0e2-7dda508e5f0a"
+      },
+      {
+        "departure_time": "09/08/24",
+        "arrival_time": "09/08/24",
+        "from_place": "Paris",
+        "to_place": "Rome",
+        "price": 1100,
+        "id": "flight_98900cc3-329e-4315-9b82-1050d15e32a0"
+      }
+    ],
+    "id": "airline_969dec49-e438-4939-beb2-993c255c0c0f"
+  },
+  {
+    "airline_name": "AMC Airlines",
+    "employees": [
+      {
+        "firstname": "Laila",
+        "lastname": "Ahmed",
+        "birthdate": "03/05/05",
+        "address": "Somewhere in Egypt",
+        "email": "laila.ahmed@example.com",
+        "start_hour": "7:30 AM",
+        "finish_hour": "4:30 PM",
+        "salary": 10500,
+        "airline_name": "Nile Air",
+        "id": "employee_66603e56-318d-42d6-a417-16a0e176acdf"
+      },
+      {
+        "firstname": "Khaled",
+        "lastname": "Fathy",
+        "birthdate": "08/10/03",
+        "address": "Somewhere in Egypt",
+        "email": "khaled.fathy@example.com",
+        "start_hour": "8:30 AM",
+        "finish_hour": "6:30 PM",
+        "salary": 11500,
+        "airline_name": "Air Cairo",
+        "id": "employee_c3d7223f-421a-43b5-9b97-9d64f2d45782"
+      },
+      {
+        "firstname": "Hana",
+        "lastname": "Zaki",
+        "birthdate": "11/25/01",
+        "address": "Somewhere in Egypt",
+        "email": "hana.zaki@example.com",
+        "start_hour": "7:00 AM",
+        "finish_hour": "4:00 PM",
+        "salary": 9800,
+        "airline_name": "EgyptAir",
+        "id": "employee_e749ac5c-b003-4dbd-87d3-714cf942970d"
+      },
+      {
+        "firstname": "Mohamed",
+        "lastname": "Ali",
+        "birthdate": "04/13/04",
+        "address": "Somewhere in Egypt",
+        "email": "mohamed.ali@example.com",
+        "start_hour": "9:00 AM",
+        "finish_hour": "5:30 PM",
+        "salary": 11300,
+        "airline_name": "FlyEgypt",
+        "id": "employee_725f09db-7b41-4466-adf3-009087151a17"
+      }
+    ],
+    "services": [
+      {
+        "title": "The Dark Knight",
+        "director": "Christopher Nolan",
+        "release_year": 2008,
+        "genre": "Action",
+        "rating": 9.0,
+        "id": "movie_b72dcb74-b87e-4b26-822c-80d6cc33f50b"
+      },
+      {
+        "title": "Forrest Gump",
+        "director": "Robert Zemeckis",
+        "release_year": 1994,
+        "genre": "Drama",
+        "rating": 8.8,
+        "id": "movie_65018352-d75d-4f93-99a3-a865a3a9854b"
+      },
+      {
+        "name": "Tacos",
+        "ingredients": [
+          "Tortillas",
+          "Ground Beef",
+          "Cheese",
+          "Lettuce",
+          "Tomato",
+          "Sour Cream"
+        ],
+        "calories": 600,
+        "id": "meal_d0d518ed-1296-477f-a775-2b8462d532e9"
+      },
+      {
+        "name": "Chicken Curry",
+        "ingredients": [
+          "Chicken",
+          "Curry Sauce",
+          "Rice",
+          "Coconut Milk",
+          "Spices"
+        ],
+        "calories": 900,
+        "id": "meal_8e301fa6-6a36-4c4f-99f9-99168f59b138"
+      }
+    ],
+    "flights": [
+      {
+        "departure_time": "09/09/24",
+        "arrival_time": "09/09/24",
+        "from_place": "Tokyo",
+        "to_place": "Sydney",
+        "price": 7800,
+        "id": "flight_d209923e-817e-4623-ae07-bcb10ccd71e0"
+      },
+      {
+        "departure_time": "09/10/24",
+        "arrival_time": "09/10/24",
+        "from_place": "Los Angeles",
+        "to_place": "Toronto",
+        "price": 3900,
+        "id": "flight_a49596d2-4c4d-4aac-9582-e9a29fb1793b"
+      },
+      {
+        "departure_time": "09/11/24",
+        "arrival_time": "09/11/24",
+        "from_place": "Mumbai",
+        "to_place": "Singapore",
+        "price": 4300,
+        "id": "flight_2f28bddd-7e1b-458d-bfa8-f6e7ec511741"
+      },
+      {
+        "departure_time": "09/12/24",
+        "arrival_time": "09/12/24",
+        "from_place": "Hong Kong",
+        "to_place": "San Francisco",
+        "price": 11300,
+        "id": "flight_7ac0433d-0a2e-4c0c-bacb-66661210e54a"
+      }
+    ],
+    "id": "airline_198a4c56-e9d8-41b0-9ae7-5e896235fe97"
+  },
+  {
+    "airline_name": "Nile Air",
+    "employees": [
+      {
+        "firstname": "Noha",
+        "lastname": "Khalil",
+        "birthdate": "07/30/02",
+        "address": "Somewhere in Egypt",
+        "email": "noha.khalil@example.com",
+        "start_hour": "8:00 AM",
+        "finish_hour": "4:30 PM",
+        "salary": 10700,
+        "airline_name": "Air Arabia Egypt",
+        "id": "employee_d9dc325b-be74-4240-a6f4-77a4e7e06956"
+      },
+      {
+        "firstname": "Youssef",
+        "lastname": "Saleh",
+        "birthdate": "02/18/03",
+        "address": "Somewhere in Egypt",
+        "email": "youssef.saleh@example.com",
+        "start_hour": "7:30 AM",
+        "finish_hour": "6:00 PM",
+        "salary": 12500,
+        "airline_name": "Nile Air",
+        "id": "employee_4ccf6e6e-a5f6-4107-8560-920c0762893f"
+      },
+      {
+        "firstname": "Fatma",
+        "lastname": "Mostafa",
+        "birthdate": "12/09/05",
+        "address": "Somewhere in Egypt",
+        "email": "fatma.mostafa@example.com",
+        "start_hour": "8:30 AM",
+        "finish_hour": "5:30 PM",
+        "salary": 10900,
+        "airline_name": "Air Cairo",
+        "id": "employee_8316a0a5-868f-4e6b-b18e-086af421978e"
+      }
+    ],
+    "services": [
+      {
+        "title": "The Godfather",
+        "director": "Francis Ford Coppola",
+        "release_year": 1972,
+        "genre": "Crime",
+        "rating": 9.2,
+        "id": "movie_9cc117e4-b826-41f6-a7b2-732df9c50ebc"
+      },
+      {
+        "name": "Vegetable Stir-Fry",
+        "ingredients": [
+          "Broccoli",
+          "Carrots",
+          "Bell Peppers",
+          "Soy Sauce",
+          "Tofu"
+        ],
+        "calories": 500,
+        "id": "meal_7986cd82-f252-4921-a697-940263f1605a"
+      }
+    ],
+    "flights": [
+      {
+        "departure_time": "09/13/24",
+        "arrival_time": "09/13/24",
+        "from_place": "Moscow",
+        "to_place": "Beijing",
+        "price": 5800,
+        "id": "flight_f2473cfe-3ae7-499e-bb2e-161d325420e9"
+      },
+      {
+        "departure_time": "09/14/24",
+        "arrival_time": "09/14/24",
+        "from_place": "Istanbul",
+        "to_place": "Madrid",
+        "price": 2900,
+        "id": "flight_9ca1d655-f836-4b71-8402-bfd328961a09"
+      },
+      {
+        "departure_time": "09/15/24",
+        "arrival_time": "09/15/24",
+        "from_place": "Cape Town",
+        "to_place": "Dubai",
+        "price": 7600,
+        "id": "flight_7a7d2caf-4508-4b46-bdec-b533aff4fcad"
+      },
+      {
+        "departure_time": "09/16/24",
+        "arrival_time": "09/16/24",
+        "from_place": "Buenos Aires",
+        "to_place": "Miami",
+        "price": 7100,
+        "id": "flight_389cac79-3e81-471f-b04c-e25fe72d5118"
+      }
+    ],
+    "id": "airline_982d5729-61f2-4b6c-9462-eb0a4f472652"
+  }
+]

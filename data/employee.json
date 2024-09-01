@@ -1,0 +1,122 @@
+[
+  {
+    "firstname": "Amr",
+    "lastname": "Alnas",
+    "birthdate": "01/01/04",
+    "address": "Somewhere in Egypt",
+    "email": "amer.live477@gmail.com",
+    "start_hour": "7:00 AM",
+    "finish_hour": "5:00 PM",
+    "salary": 10000,
+    "airline_name": "Air Arabia Egypt",
+    "id": "employee_1267274b-fb75-4aa8-89b6-1ba9dafb79c6"
+  },
+  {
+    "firstname": "Sara",
+    "lastname": "Mahmoud",
+    "birthdate": "05/15/03",
+    "address": "Somewhere in Egypt",
+    "email": "sara.mahmoud@example.com",
+    "start_hour": "8:00 AM",
+    "finish_hour": "6:00 PM",
+    "salary": 12000,
+    "airline_name": "Egyptair",
+    "id": "employee_99a434b1-58bb-44ec-be0d-9c3684ab935d"
+  },
+  {
+    "firstname": "Omar",
+    "lastname": "Hassan",
+    "birthdate": "10/20/02",
+    "address": "Somewhere in Egypt",
+    "email": "omar.hassan@example.com",
+    "start_hour": "9:00 AM",
+    "finish_hour": "5:00 PM",
+    "salary": 11000,
+    "airline_name": "FlyEgypt",
+    "id": "employee_64f71b3b-e55b-4c11-9bd9-0c5168a57e9d"
+  },
+  {
+    "firstname": "Laila",
+    "lastname": "Ahmed",
+    "birthdate": "03/05/05",
+    "address": "Somewhere in Egypt",
+    "email": "laila.ahmed@example.com",
+    "start_hour": "7:30 AM",
+    "finish_hour": "4:30 PM",
+    "salary": 10500,
+    "airline_name": "Nile Air",
+    "id": "employee_66603e56-318d-42d6-a417-16a0e176acdf"
+  },
+  {
+    "firstname": "Khaled",
+    "lastname": "Fathy",
+    "birthdate": "08/10/03",
+    "address": "Somewhere in Egypt",
+    "email": "khaled.fathy@example.com",
+    "start_hour": "8:30 AM",
+    "finish_hour": "6:30 PM",
+    "salary": 11500,
+    "airline_name": "Air Cairo",
+    "id": "employee_c3d7223f-421a-43b5-9b97-9d64f2d45782"
+  },
+  {
+    "firstname": "Hana",
+    "lastname": "Zaki",
+    "birthdate": "11/25/01",
+    "address": "Somewhere in Egypt",
+    "email": "hana.zaki@example.com",
+    "start_hour": "7:00 AM",
+    "finish_hour": "4:00 PM",
+    "salary": 9800,
+    "airline_name": "EgyptAir",
+    "id": "employee_e749ac5c-b003-4dbd-87d3-714cf942970d"
+  },
+  {
+    "firstname": "Mohamed",
+    "lastname": "Ali",
+    "birthdate": "04/13/04",
+    "address": "Somewhere in Egypt",
+    "email": "mohamed.ali@example.com",
+    "start_hour": "9:00 AM",
+    "finish_hour": "5:30 PM",
+    "salary": 11300,
+    "airline_name": "FlyEgypt",
+    "id": "employee_725f09db-7b41-4466-adf3-009087151a17"
+  },
+  {
+    "firstname": "Noha",
+    "lastname": "Khalil",
+    "birthdate": "07/30/02",
+    "address": "Somewhere in Egypt",
+    "email": "noha.khalil@example.com",
+    "start_hour": "8:00 AM",
+    "finish_hour": "4:30 PM",
+    "salary": 10700,
+    "airline_name": "Air Arabia Egypt",
+    "id": "employee_d9dc325b-be74-4240-a6f4-77a4e7e06956"
+  },
+  {
+    "firstname": "Youssef",
+    "lastname": "Saleh",
+    "birthdate": "02/18/03",
+    "address": "Somewhere in Egypt",
+    "email": "youssef.saleh@example.com",
+    "start_hour": "7:30 AM",
+    "finish_hour": "6:00 PM",
+    "salary": 12500,
+    "airline_name": "Nile Air",
+    "id": "employee_4ccf6e6e-a5f6-4107-8560-920c0762893f"
+  },
+  {
+    "firstname": "Fatma",
+    "lastname": "Mostafa",
+    "birthdate": "12/09/05",
+    "address": "Somewhere in Egypt",
+    "email": "fatma.mostafa@example.com",
+    "start_hour": "8:30 AM",
+    "finish_hour": "5:30 PM",
+    "salary": 10900,
+    "airline_name": "Air Cairo",
+    "id": "employee_8316a0a5-868f-4e6b-b18e-086af421978e"
+  }
+]

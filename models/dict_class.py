@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
+import datetime
 import re
 from typing import Dict, Any
+import json
 
 class DictClass:
     def to_dict(self) -> Dict[str, Any]:
@@ -26,3 +28,33 @@ class DictClass:
         del cleaned_dict[last_id_name]
         cleaned_dict['id'] = id_value
         return cleaned_dict
+
+    @classmethod
+    def json_saving(cls, *args) -> None:
+        json_list = []
+        if args:
+            file_path = f'/mnt/h/oop_alex_eagles/data/{cls.__name__.lower()}.json'
+            for arg in args:
+                if arg is None:
+                    return
+                else:
+                    object_dict = arg.to_dict()
+                    for key in object_dict.keys():
+                        if isinstance(object_dict[key], list):
+                            replacing_list = []
+                            value_list = object_dict[key]
+                            for elm in value_list:
+                                try:
+                                    elm_dict_checker = elm.to_dict()
+                                except Exception as err:
+                                    continue
+                                for elm_check_key in elm_dict_checker.keys():
+                                    if isinstance(elm_dict_checker[elm_check_key], datetime.datetime):
+                                        elm_dict_checker[elm_check_key] = elm_dict_checker[elm_check_key].strftime("%x")
+                                replacing_list.append(elm_dict_checker)
+                                object_dict[key] = replacing_list
+                        elif isinstance(object_dict[key], datetime.datetime):
+                            object_dict[key] = object_dict[key].strftime("%x")
+                    json_list.append(object_dict)
+                with open(file_path, 'w', encoding='utf-8') as file:
+                    json.dump(json_list, file)

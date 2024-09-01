@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import datetime
+import json
+import os
 from models.airline import Airline
 from models.employee import Employee
 from models.customer import Customer
@@ -10,18 +12,6 @@ from models.meal import Meal
 from models.movie import Movie
 
 def create():
-    # Airlines
-    airline1 = Airline('Air Arabia Egypt', None, None, None)
-    airline2 = Airline('AMC Airlines', None, None, None)
-    airline3 = Airline('Nile Air', None, None, None)
-
-    #Airports
-    airport1 = Airport("Amr's Alnas", 'Egypt, Alexandria, Borg El Arab', (2010, 2, 15), None, None, (300000, 2000000), True)
-    airport2 = Airport("Nile Delta International", 'Egypt, Cairo, Heliopolis', (2005, 6, 30), None, None, (500000, 4000000), True)
-    airport3 = Airport("Red Sea Gateway", 'Egypt, Hurghada, Safaga Road', (2012, 11, 20), None, None, (350000, 2500000), True)
-    airport4 = Airport("Sphinx Airport", 'Egypt, Giza, Sphinx City', (2018, 7, 5), None, None, (150000, 1200000), True)
-    airport5 = Airport("Luxor Valley Airport", 'Egypt, Luxor, Karnak Road', (2008, 4, 18), None, None, (250000, 1800000), True)
-    airport6 = Airport("Marsa Alam International", 'Egypt, Marsa Alam, Airport Road', (2003, 9, 25), None, None, (280000, 2200000), True)
 
     #Customers
     customer1 = Customer('Amira', 'Ahmed Nebh', (1999, 4, 1), 'ahnn99992@gmail.com', 20000, None)
@@ -36,7 +26,10 @@ def create():
     customer10 = Customer('Youssef', 'Khaled Gamal', (1993, 1, 22), 'youssefgamal93@example.com', 21000, None)
     customer11 = Customer('Fatma', 'Mahmoud Ayman', (2000, 5, 7), 'fatmamay00@example.com', 14000, None)
     customer12 = Customer('Ali', 'Tamer Sayed', (1989, 10, 19), 'alitamer89@example.com', 19000, None)
-
+    Customer.json_saving(customer1, customer2, customer3,
+                        customer4, customer5, customer6,
+                        customer7, customer8, customer9,
+                        customer10, customer11, customer12)
     # Employees
     employee1 = Employee('Amr', 'Alnas', (2004, 1, 1), 'amer.live477@gmail.com', '7:00 AM', '5:00 PM', 10000, 'Air Arabia Egypt')
     employee2 = Employee('Sara', 'Mahmoud', (2003, 5, 15), 'sara.mahmoud@example.com', '8:00 AM', '6:00 PM', 12000, 'Egyptair')
@@ -48,6 +41,7 @@ def create():
     employee8 = Employee('Noha', 'Khalil', (2002, 7, 30), 'noha.khalil@example.com', '8:00 AM', '4:30 PM', 10700, 'Air Arabia Egypt')
     employee9 = Employee('Youssef', 'Saleh', (2003, 2, 18), 'youssef.saleh@example.com', '7:30 AM', '6:00 PM', 12500, 'Nile Air')
     employee10 = Employee('Fatma', 'Mostafa', (2005, 12, 9), 'fatma.mostafa@example.com', '8:30 AM', '5:30 PM', 10900, 'Air Cairo')
+    Employee.json_saving(employee1, employee2, employee3, employee4, employee5, employee6, employee7, employee8, employee9, employee10)
 
     #Flights
     flight1 = Flight(datetime.datetime(year=2024, month=9, day=5, hour=7, minute=30),
@@ -99,6 +93,11 @@ def create():
                     'Buenos Aires',
                     'Miami', 7100)
 
+    Flight.json_saving(flight1, flight2, flight3,
+                    flight4, flight5, flight6,
+                    flight7, flight8, flight9,
+                    flight10, flight11, flight12)
+
     #Gates
     gate1 = Gate(1, 'Besides the fancy Italian Resturant', 20, (70, 50))
     gate2 = Gate(2, 'Near the coffee shop', 15, (60, 45))
@@ -109,7 +108,7 @@ def create():
     gate7 = Gate(7, 'Close to the information desk', 20, (68, 50))
     gate8 = Gate(8, 'In front of the bookshop', 28, (78, 58))
     gate9 = Gate(9, 'Next to the souvenir store', 24, (73, 53))
-
+    Gate.json_saving(gate1, gate2, gate3, gate4, gate5, gate6, gate7, gate8, gate9)
     #Meals
     meal1 = Meal('Sushi', ['Rice', 'Nori', 'Fish', 'Vegetables'], 700)
     meal2 = Meal('Spaghetti Bolognese', ['Spaghetti', 'Ground Beef', 'Tomato Sauce', 'Onion', 'Garlic'], 850)
@@ -117,6 +116,7 @@ def create():
     meal4 = Meal('Tacos', ['Tortillas', 'Ground Beef', 'Cheese', 'Lettuce', 'Tomato', 'Sour Cream'], 600)
     meal5 = Meal('Chicken Curry', ['Chicken', 'Curry Sauce', 'Rice', 'Coconut Milk', 'Spices'], 900)
     meal6 = Meal('Vegetable Stir-Fry', ['Broccoli', 'Carrots', 'Bell Peppers', 'Soy Sauce', 'Tofu'], 500)
+    Meal.json_saving(meal1, meal2, meal3, meal4, meal5, meal6)
 
     # Movies
     movie1 = Movie('The Pursuit of Happyness', 'Gabriele Muccino', 2007, 'Drama', 8.0)
@@ -125,6 +125,20 @@ def create():
     movie4 = Movie('The Dark Knight', 'Christopher Nolan', 2008, 'Action', 9.0)
     movie5 = Movie('Forrest Gump', 'Robert Zemeckis', 1994, 'Drama', 8.8)
     movie6 = Movie('The Godfather', 'Francis Ford Coppola', 1972, 'Crime', 9.2)
+    Movie.json_saving(movie1, movie2, movie3, movie4, movie5, movie6)
 
+    #Airports
+    airport1 = Airport("Amr's Alnas", 'Egypt, Alexandria, Borg El Arab', (2010, 2, 15), [gate1, gate2, gate3], None, (300000, 2000000), True)
+    airport2 = Airport("Nile Delta International", 'Egypt, Cairo, Heliopolis', (2005, 6, 30), [gate4, gate5], None, (500000, 4000000), True)
+    airport3 = Airport("Red Sea Gateway", 'Egypt, Hurghada, Safaga Road', (2012, 11, 20), [gate6, gate7], None, (350000, 2500000), True)
+    airport4 = Airport("Sphinx Airport", 'Egypt, Giza, Sphinx City', (2018, 7, 5), [gate8], None, (150000, 1200000), True)
+    airport5 = Airport("Luxor Valley Airport", 'Egypt, Luxor, Karnak Road', (2008, 4, 18), [gate9], None, (250000, 1800000), True)
+    Airport.json_saving(airport1, airport2, airport3, airport4, airport5)
+
+    # Airlines
+    airline1 = Airline('Air Arabia Egypt', [employee1, employee2, employee3], [movie1, movie2, movie3, meal1, meal2, meal3], [flight1, flight2, flight3, flight4])
+    airline2 = Airline('AMC Airlines', [employee4, employee5, employee6, employee7], [movie4, movie5, meal4, meal5], [flight5, flight6, flight7, flight8])
+    airline3 = Airline('Nile Air', [employee8, employee9, employee10], [movie6, meal6], [flight9, flight10, flight11, flight12])
+    Airline.json_saving(airline1, airline2, airline3)
 
 create()

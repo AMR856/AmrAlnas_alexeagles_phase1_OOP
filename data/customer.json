@@ -1,0 +1,122 @@
+[
+  {
+    "firstname": "Amira",
+    "lastname": "Ahmed Nebh",
+    "birthdate": "04/01/99",
+    "address": "Somewhere in Egypt",
+    "email": "ahnn99992@gmail.com",
+    "budget": 20000,
+    "flights": [],
+    "id": "customer_8fe89410-8601-4d59-aeaf-00da32b39d01"
+  },
+  {
+    "firstname": "Omar",
+    "lastname": "Hassan Ali",
+    "birthdate": "07/15/87",
+    "address": "Somewhere in Egypt",
+    "email": "omarhassan87@example.com",
+    "budget": 15000,
+    "flights": [],
+    "id": "customer_4a6c345e-8c7a-48f0-9296-bedce5e6fa62"
+  },
+  {
+    "firstname": "Sara",
+    "lastname": "Mohamed Fathy",
+    "birthdate": "11/23/95",
+    "address": "Somewhere in Egypt",
+    "email": "sarafathy95@example.com",
+    "budget": 22000,
+    "flights": [],
+    "id": "customer_742b38c2-b516-4580-b204-64aaa44acaae"
+  },
+  {
+    "firstname": "Khaled",
+    "lastname": "Youssef ElSayed",
+    "birthdate": "02/18/83",
+    "address": "Somewhere in Egypt",
+    "email": "khaledys83@example.com",
+    "budget": 18000,
+    "flights": [],
+    "id": "customer_938cce28-ff08-46c1-90bf-7dcd844deb1e"
+  },
+  {
+    "firstname": "Laila",
+    "lastname": "Mona Hafez",
+    "birthdate": "09/05/01",
+    "address": "Somewhere in Egypt",
+    "email": "lailahafez01@example.com",
+    "budget": 12000,
+    "flights": [],
+    "id": "customer_74388edd-d001-4759-a65a-acc7d9c002c5"
+  },
+  {
+    "firstname": "Mahmoud",
+    "lastname": "Nabil Saleh",
+    "birthdate": "06/30/90",
+    "address": "Somewhere in Egypt",
+    "email": "mahmoudsaleh90@example.com",
+    "budget": 25000,
+    "flights": [],
+    "id": "customer_9d515a08-a228-4817-813c-2cbad558611d"
+  },
+  {
+    "firstname": "Nadia",
+    "lastname": "Ibrahim Kamel",
+    "birthdate": "03/12/92",
+    "address": "Somewhere in Egypt",
+    "email": "nadiaik92@example.com",
+    "budget": 23000,
+    "flights": [],
+    "id": "customer_e004965a-9b7d-4147-8e94-7d3fa87e10f1"
+  },
+  {
+    "firstname": "Hassan",
+    "lastname": "Ahmed Tarek",
+    "birthdate": "08/27/85",
+    "address": "Somewhere in Egypt",
+    "email": "hassantarek85@example.com",
+    "budget": 17000,
+    "flights": [],
+    "id": "customer_94b20d8d-d8c8-4c08-b9a1-25ebfc1a881d"
+  },
+  {
+    "firstname": "Mona",
+    "lastname": "Salah Eldin",
+    "birthdate": "12/10/98",
+    "address": "Somewhere in Egypt",
+    "email": "monasalah98@example.com",
+    "budget": 16000,
+    "flights": [],
+    "id": "customer_eef97842-7b2a-467e-aa57-b3e6f2c782b3"
+  },
+  {
+    "firstname": "Youssef",
+    "lastname": "Khaled Gamal",
+    "birthdate": "01/22/93",
+    "address": "Somewhere in Egypt",
+    "email": "youssefgamal93@example.com",
+    "budget": 21000,
+    "flights": [],
+    "id": "customer_bf4f343a-626b-4d37-b1ed-3f23757fb2ad"
+  },
+  {
+    "firstname": "Fatma",
+    "lastname": "Mahmoud Ayman",
+    "birthdate": "05/07/00",
+    "address": "Somewhere in Egypt",
+    "email": "fatmamay00@example.com",
+    "budget": 14000,
+    "flights": [],
+    "id": "customer_3b2cb16f-8a4a-44d0-81b5-ad437291236b"
+  },
+  {
+    "firstname": "Ali",
+    "lastname": "Tamer Sayed",
+    "birthdate": "10/19/89",
+    "address": "Somewhere in Egypt",
+    "email": "alitamer89@example.com",
+    "budget": 19000,
+    "flights": [],
+    "id": "customer_f179384b-9576-4d71-aa30-9ae1b4ab3072"
+  }
+]
