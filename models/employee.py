@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 import sys
-
-from models.airline import Airline
 sys.path.append("..")
 from .person import Person
-from typing import Tuple, Type
+from typing import Tuple
 from helpers.fixed_values import allowed_airlines
 from helpers.helper_functions import map_range
 import re
@@ -19,13 +17,13 @@ class Employee(Person):
                 start_hour: str,
                 finish_hour: str,
                 salary: int,
-                airline: Airline,
+                airline_name: str,
                 address: str = 'Somewhere in Egypt'):
         super().__init__(firstname, lastname, birthdate, email, address)
         self.start_hour = start_hour
         self.finish_hour = finish_hour
         self.salary = salary
-        self.airline = airline
+        self.airline_name = airline_name
 
     @property
     def salary(self):
@@ -40,18 +38,19 @@ class Employee(Person):
 and with a resonable value')
 
     @property
-    def airline(self):
-        return self.__airline
+    def airline_name(self):
+        return self.__airline_name
     
-    @airline.setter
-    def airline(self, value: Airline):
-        if value is None:
-            self.__airline = None
-            return
-        if isinstance(value, Airline):
-            self.__airline = value
+    @airline_name.setter
+    def airline_name(self, value: str):
+        allowed_airlines_lower = list(map(str.lower, allowed_airlines))
+        if isinstance(value, str):
+            if value.lower() in allowed_airlines_lower:
+                self.__airline_name = value
+            else:
+                raise ValueError("You can't work there because it doesn't exist")
         else:
-            raise TypeError('You should proive an airline object')
+            raise TypeError('You should provide a string')
 
     @property
     def start_hour(self):
@@ -102,4 +101,4 @@ and with a resonable value')
             raise TypeError("Can't raise salary with non-integer value")
 
     def __str__(self) -> str:
-        return f"Employee's Start Hour is {self.start_hour} and Finish Hour is {self.finish_hour}\nHis Salary is {self.salary}\nHis Woring Hours in Total is {self.working_hours}\nAnd the Airline he is working in {self.airline.airline_name}"
+        return f"Employee's Start Hour is {self.start_hour} and Finish Hour is {self.finish_hour}\nHis Salary is {self.salary}\nHis Woring Hours in Total is {self.working_hours}\nAnd the Airline he is working in is {self.airline_name}"

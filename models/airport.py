@@ -2,6 +2,7 @@
 import sys
 sys.path.append("..")
 from typing import Tuple, List
+from uuid import uuid4
 from helpers.fixed_values import not_allowed_items_in_airports
 from .employee import Employee
 from .gate import Gate
@@ -17,6 +18,7 @@ class Airport:
                 airport_size = Tuple[int],
                 wifi_availability: bool = True
                 ):
+        self.__airport_id = f'airport_{uuid4()}'
         self.airport_name = airport_name
         self.airport_location = airport_location
         self.airport_date_of_construction = airport_date_of_construction
@@ -25,6 +27,11 @@ class Airport:
         self.employees = employees
         self.wifi_availability = wifi_availability
 
+
+    @property
+    def airport_id(self) -> str:
+        return self.__airport_id
+    
     @property
     def airport_name(self) -> str:
         return self.__airport_name
@@ -69,7 +76,7 @@ class Airport:
     @gates.setter
     def gates(self, value: List[Gate]) -> None:
         if value is None:
-            self.__gates = None
+            self.__gates = []
             return
         if isinstance(value, list):
             for val in value:
@@ -129,7 +136,7 @@ class Airport:
     @employees.setter
     def employees(self, value: List[Employee]):
         if value is None:
-            self.__employees = None
+            self.__employees = []
             return
         if isinstance(value, list):
             for val in value:
@@ -170,4 +177,10 @@ class Airport:
             raise TypeError('You have to provide a boolean')
 
     def __str__(self) -> str:
-        return f'{self.airport_name}\nAirport Location is {self.airport_location}\nAirport Date of Construction is {self.airport_date_of_construction}\nGates Count is {len(self.gates)}\nAirport Size is {self.airport_size}\nEmployees Count is {len(self.employees)}\nWifi is {"Available" if self.wifi_availability else "Not Available"}'
+        gates_numbers = []
+        employees_names = []
+        for gate in self.__gates:
+            gates_numbers.append(gate.gate_number)
+        for employee in self.__employees:
+            employees_names.append(employee.fullname)
+        return f'{self.airport_name}\nAirport Location is {self.airport_location}\nAirport Date of Construction is {self.airport_date_of_construction}\nGates Numbers are {gates_numbers}\nAirport Size is {self.airport_size}\nEmployees Names are {employees_names}\nWifi is {"Available" if self.wifi_availability else "Not Available"}'

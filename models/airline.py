@@ -1,22 +1,27 @@
 #!/usr/bin/env python3
-from math import e
-from typing import List, Type
-
-from validators import isin
+from typing import List
+from uuid import uuid4
 from .employee import Employee
+from .flight import Flight
 from .meal import Meal
 from .movie import Movie
 from helpers.fixed_values import allowed_airlines
 
 
 class Airline:
-    # from .flight import Flight
     def __init__(self, airline_name: str,
                     employees: List[Employee],
-                    services: List[Movie | Meal]) -> None:
+                    services: List[Movie | Meal],
+                    flights: List[Flight]) -> None:
+        self.__airline_id = f'airline_{uuid4()}'
         self.airline_name = airline_name
         self.employees = employees
         self.services = services
+        self.flights = flights
+
+    @property
+    def airline_id(self) -> str:
+        return self.__airline_id
 
     @property
     def airline_name(self) -> str:
@@ -35,7 +40,7 @@ class Airline:
     @employees.setter
     def employees(self, value: List[Employee]):
         if value is None:
-            self.__employees = None
+            self.__employees = []
             return
         if isinstance(value, list):
             for val in value:
@@ -71,7 +76,7 @@ class Airline:
     @services.setter
     def services(self, value) -> None:
         if value is None:
-            self.__services = None
+            self.__services = []
             return
         if isinstance(value, list):
             for val in value:
@@ -101,5 +106,53 @@ class Airline:
             else:
                 print("Service wasn't found")
 
+    @property
+    def flights(self) -> List[Flight]:
+        return self.__flights
+    
+    @flights.setter
+    def flights(self, value) -> None:
+        if value is None:
+            self.__flights = []
+            return
+        if isinstance(value, list):
+            for val in value:
+                if not isinstance(val, Flight):
+                    raise TypeError('You should give me a flight object')
+            self.__flights = value
+        else:
+            raise TypeError('You didn\t provide a list')
+
+    def add_flight(self, value: Flight) -> None:
+        if isinstance(value, Flight):
+            self.__flights.append(value)
+        else:
+            raise TypeError('You should provdie a flight object')
+
+    def remove_flight(self, flight_id: str) -> None:
+        status = 0
+        if isinstance(flight_id, str):
+            for flight in self.__flights:
+                    if flight.flight_id == flight_id:
+                        self.__flights.remove(flight)
+                        status = 1
+                        break
+            if status:
+                print('Service was found and removed')
+            else:
+                print("Service wasn't found")
+
     def __str__(self) -> str:
-        return f'{self.airline_name}\nEmployees Count is {len(self.employees)}\nAvailable Services Count is {len(self.services)}'
+        employees_names = []
+        services_names = []
+        flights_id = []
+        for employee in self.__employees:
+            employees_names.append(employee.fullname)
+        for service in self.__services:
+            if isinstance(service, Meal):
+                services_names.append(service.name)
+            else:
+                services_names.append(service.title)
+        for flight in self.__flights:
+            flights_id.append(flight.flight_id)
+        return f"Airline's Name is {self.airline_name}\nEmployees Names are {employees_names}\nAvailable Services are {services_names}\nAnd the Available Flights IDs are {flights_id}"

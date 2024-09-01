@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from typing import List
+
 allowed_airlines : List[str] = [
     'Air Arabia Egypt',
     'Air Cairo',
@@ -32,3 +33,4 @@ not_allowed_items_in_airports : List[str] = [
     'Self-defense Sprays',
     'Large Lithum Batteries'
 ]
+

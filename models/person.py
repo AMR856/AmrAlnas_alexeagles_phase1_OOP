@@ -1,19 +1,44 @@
 #!/usr/bin/env python3
+import sys
+sys.path.append("..")
 import datetime
 import validators
 from typing import Tuple
+from .dict_class import DictClass
+from uuid import uuid4
 
-class Person:
+class Person(DictClass):
     def __init__(self, firstname: str,
                 lastname: str,
                 birthdate: Tuple[int],
                 email: str,
                 address: str = 'Somewhere in Egypt') -> None:
+        self.__person_id = None
+        self.__customer_id = None
+        self.__employee_id = None
+        if self.__class__.__name__ == 'Person':
+            self.__person_id = f'person_{uuid4()}'
+        elif self.__class__.__name__ == 'Employee':
+            self.__employee_id = f'employee_{uuid4()}'
+        else:
+            self.__customer_id = f'customer_{uuid4()}'
         self.firstname = firstname
         self.lastname = lastname
         self.birthdate = birthdate
         self.address= address
         self.email = email
+
+    @property
+    def employee_id(self):
+        return self.__employee_id
+
+    @property
+    def customer_id(self):
+        return self.__customer_id
+
+    @property
+    def person_id(self) -> str:
+        return self.__person_id
 
     @property
     def firstname(self) -> str:
@@ -80,6 +105,7 @@ class Person:
     @property
     def fullname(self) -> str:
         return (self.firstname + ' ' + self.lastname)
+
 
     def __str__(self) -> str:
         return f"Person's Name is {self.fullname}\nBirthdate is {self.birthdate}\nAddress is {self.address}\nPerson's Email is {self.email}"

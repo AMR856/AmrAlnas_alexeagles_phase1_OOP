@@ -38,7 +38,7 @@ broke little boy')
     @flights.setter
     def flights(self, value: List[Flight] | None):
         if value is None:
-            self.__flights = None
+            self.__flights = []
             return
         if isinstance(value, list):
             for flight in value:
@@ -72,4 +72,4 @@ broke little boy')
         customers_flights_ids = []
         for flight in self.__flights:
             customers_flights_ids.append(flight.flight_id)
-        return f"Customer's Name is {self.fullname}\bBirthdate is {self.birthdate}\nAddress is {self.address}\nCustomer's Email is {self.email}\nHis Budget is {self.budget}\nAnd Booked {customers_flights_ids} Flights"
+        return f"Customer's Name is {self.fullname}\nBirthdate is {self.birthdate}\nAddress is {self.address}\nCustomer's Email is {self.email}\nHis Budget is {self.budget}\nAnd Booked {customers_flights_ids} Flights"

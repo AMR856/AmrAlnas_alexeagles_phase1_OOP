@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
 from typing import List
+from uuid import uuid4
 
 class Meal:
     def __init__(self, name: str,
                 ingredients: List[str],
                 calories: int) -> None:
+        self.__meal_id = f'meal_{uuid4()}'
         self.name = name
         self.ingredients = ingredients
         self.calories = calories
+    
+    @property
+    def meal_id(self) -> str:
+        return self.__meal_id
     
     @property
     def name(self) -> str:

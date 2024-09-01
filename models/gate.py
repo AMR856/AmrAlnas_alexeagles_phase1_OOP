@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from typing import Tuple
+from uuid import uuid4
 
 class Gate:
     def __init__(self,
@@ -7,10 +8,15 @@ class Gate:
                 gate_location: str,
                 gate_allowed_passing_people: int,
                 gate_size: Tuple[int]) -> None:
+        self.__gate_id = f'gate_{uuid4()}'
         self.gate_number = gate_number
         self.gate_location = gate_location
         self.gate_allowed_passing_people = gate_allowed_passing_people
         self.gate_size = gate_size
+
+    @property
+    def gate_id(self) -> int:
+        return self.__gate_id
     
     @property
     def gate_number(self) -> int:

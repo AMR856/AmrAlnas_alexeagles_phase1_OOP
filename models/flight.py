@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 import datetime
-import uuid
-from models.airline import Airline
+from uuid import uuid4
 
 class Flight:
-    def __init__(self, flight_id: uuid.UUID,
+    def __init__(self,
                 departure_time: datetime.datetime,
                 arrival_time: datetime.datetime,
                 from_place: str,
                 to_place: str,
                 price: int) -> None:
-        self.flight_id = flight_id
+        self.__flight_id = f'flight_{uuid4()}'
         self.departure_time = departure_time
         self.arrival_time = arrival_time
         self.from_place = from_place
@@ -19,14 +18,7 @@ class Flight:
 
     @property
     def flight_id(self) -> str:
-        return str(self.__flight_id)
-    
-    @flight_id.setter
-    def flight_id(self, value: uuid.UUID) -> None:
-        if isinstance(value, uuid.UUID):
-            self.__flight_id = value
-        else:
-            raise TypeError('You have to provide a uuid.UUID object')
+        return self.__flight_id
 
     @property
     def departure_time(self) -> str:

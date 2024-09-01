@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from uuid import uuid4
 
 class Movie:
     def __init__(self,
@@ -7,11 +8,16 @@ class Movie:
                 release_year: str,
                 genre: str,
                 rating: float) -> None:
+        self.__movie_id = f'movie_{uuid4()}'
         self.title = title
         self.director = director
         self.release_year = release_year
         self.genre = genre
         self.rating = rating
+
+    @property
+    def movie_id(self) -> str:
+        return self.__movie_id
 
     @property
     def title(self) -> str:
