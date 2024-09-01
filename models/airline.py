@@ -5,10 +5,11 @@ from .employee import Employee
 from .flight import Flight
 from .meal import Meal
 from .movie import Movie
+from .dict_class import DictClass
 from helpers.fixed_values import allowed_airlines
 
 
-class Airline:
+class Airline(DictClass):
     def __init__(self, airline_name: str,
                     employees: List[Employee],
                     services: List[Movie | Meal],

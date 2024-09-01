@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 import datetime
 from uuid import uuid4
+from .dict_class import DictClass
 
-class Flight:
+class Flight(DictClass):
     def __init__(self,
                 departure_time: datetime.datetime,
                 arrival_time: datetime.datetime,

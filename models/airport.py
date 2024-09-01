@@ -5,10 +5,11 @@ from typing import Tuple, List
 from uuid import uuid4
 from helpers.fixed_values import not_allowed_items_in_airports
 from .employee import Employee
+from .dict_class import DictClass
 from .gate import Gate
 import datetime
 
-class Airport:
+class Airport(DictClass):
     not_allowed_items_in_airports = not_allowed_items_in_airports
     def __init__(self, airport_name: str,
                 airport_location: str,

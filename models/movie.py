@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from uuid import uuid4
-
-class Movie:
+from .dict_class import DictClass
+class Movie(DictClass):
     def __init__(self,
                 title: str,
                 director: str,

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 from typing import Tuple
 from uuid import uuid4
+from .dict_class import DictClass
 
-class Gate:
+class Gate(DictClass):
     def __init__(self,
                 gate_number: int,
                 gate_location: str,

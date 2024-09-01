@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 from typing import List
 from uuid import uuid4
+from .dict_class import DictClass
 
-class Meal:
+class Meal(DictClass):
     def __init__(self, name: str,
                 ingredients: List[str],
                 calories: int) -> None:

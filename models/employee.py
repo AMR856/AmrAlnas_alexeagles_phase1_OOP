@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import sys
 sys.path.append("..")
+from .dict_class import DictClass
 from .person import Person
 from typing import Tuple
 from helpers.fixed_values import allowed_airlines
@@ -9,7 +10,7 @@ import re
 
 lower_value_allowed_airlines = list(map(str.lower, allowed_airlines))
 
-class Employee(Person):
+class Employee(Person, DictClass):
     def __init__(self, firstname: str,
                 lastname: str,
                 birthdate: Tuple[int],
